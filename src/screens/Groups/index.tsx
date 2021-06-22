@@ -18,7 +18,6 @@ export const GroupsScreen: React.VFC<Props> = ({ navigation }) => {
       <View padder>
         <GroupCard onPress={() => navigation.navigate('Account')} />
         <GroupCard onPress={() => navigation.navigate('Account')} />
-        <GroupCard onPress={() => navigation.navigate('Account')} />
       </View>
     </Content>
   );
