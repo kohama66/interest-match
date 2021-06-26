@@ -16,8 +16,8 @@ export const GroupsScreen: React.VFC<Props> = ({ navigation }) => {
         <H1 style={styles.title}>参加中のグループ</H1>
       </View>
       <View padder>
-        <GroupCard onPress={() => navigation.navigate('Account')} />
-        <GroupCard onPress={() => navigation.navigate('Account')} />
+        <GroupCard onPress={() => navigation.navigate('Chat')} />
+        <GroupCard onPress={() => navigation.navigate('Chat')} />
       </View>
     </Content>
   );
