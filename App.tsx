@@ -1,28 +1,26 @@
 import React from 'react';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 import { Container } from 'native-base';
-import { GroupsScreen } from 'src/screens/Groups';
-import { AccountScreen } from 'src/screens/Account';
-import { ChatScreen } from 'src/screens/Chat';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { GroupsStack } from 'src/navigate/Groups';
+import { AccountStack } from 'src/navigate/Account';
 
-export type RootStackParamList = {
+export type RootTabParamList = {
   Groups: undefined;
   Account: undefined;
-  Chat: undefined;
 };
 
 export default function App() {
-  const Stack = createStackNavigator<RootStackParamList>();
+  const Tab = createBottomTabNavigator<RootTabParamList>();
+
   return (
     <NavigationContainer>
       <Container>
-        <Stack.Navigator>
-          <Stack.Screen name="Groups" component={GroupsScreen} />
-          <Stack.Screen name="Account" component={AccountScreen} />
-          <Stack.Screen name="Chat" component={ChatScreen} />
-        </Stack.Navigator>
+        <Tab.Navigator>
+          <Tab.Screen name="Groups" component={GroupsStack} />
+          <Tab.Screen name="Account" component={AccountStack} />
+        </Tab.Navigator>
       </Container>
     </NavigationContainer>
     // <>

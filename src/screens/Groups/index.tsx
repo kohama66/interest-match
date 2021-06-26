@@ -1,12 +1,12 @@
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from 'App';
 import { Content, H1, View } from 'native-base';
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { GroupCard } from 'src/component/common/GroupCard';
+import { GroupStackParamList } from 'src/navigate/Groups';
 
 type Props = {
-  navigation: StackNavigationProp<RootStackParamList, 'Groups'>;
+  navigation: StackNavigationProp<GroupStackParamList, 'Groups'>;
 };
 
 export const GroupsScreen: React.VFC<Props> = ({ navigation }) => {
